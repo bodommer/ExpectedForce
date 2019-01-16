@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {
 	
 	double EXF;
 	for (int i = 0; i < nNodes; i++){
-		//calculate and print on file the Expected Force of each node
+		//calculates and prints on file the Expected Force of each node
 		EXF = exfcpp(egosVect, altersVect, i);
 		outfile << std::to_string(i) << "  " << std::to_string(EXF) << endl;
 	}
