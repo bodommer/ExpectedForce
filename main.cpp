@@ -23,7 +23,7 @@ int snap_to_edgelist(svi &egos, svi &alters,
 			//augment the edgelist
 			egos.push_back(node_id);
 			alters.push_back(NI.GetOutNId(out_cnt));
-			//std::cout << node_id << " - " << NI.GetOutNId(out_cnt) << "\n";
+			//std::cout << node_id << " - " << NI.GetOutNId(out_cnt) << "\n"; //prints edges
 		}
 	}
 	return 0;
