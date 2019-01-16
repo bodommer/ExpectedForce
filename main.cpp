@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
 	PUNGraph G = TUNGraph::Load(FIn);
 	
 	/*
-	// alternatively, generate a network using Forest Fire model
+	// alternatively, generate a 100 nodes network using Forest Fire model
 	PNGraph H = TSnap::GenForestFire(100, 0.35, 0.35);
 	// convert to undirected graph
 	PUNGraph G = TSnap::ConvertGraph<PUNGraph>(H);
