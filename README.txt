@@ -25,5 +25,5 @@ CONTENTS
 
 "test.graph" is a 100-nodes SNAP graph saved in binary. 
 
-Everything else correctly includes SNAP.
+Everything else correctly implements SNAP.
 
