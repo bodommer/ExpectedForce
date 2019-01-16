@@ -30,7 +30,6 @@
  creates more complex code.
  */
 
-#include <Rcpp.h>
 #include <algorithm>
 #include <vector>
 #include <queue>
