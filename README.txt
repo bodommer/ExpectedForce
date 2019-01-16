@@ -1,7 +1,5 @@
-
-"exffunction.cpp": copyright Glenn Lawyer, 2013.
-
 This is a repository created by Paolo Sylos Labini in order to test the Glenn Lawyer "Expected Force" algorithm on SNAP graphs in C++ .
+"exffunction.cpp" copyright Glenn Lawyer, 2013.
 --------------------------------------------------------------
 
 USAGE (Visual Studio)
