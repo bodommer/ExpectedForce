@@ -206,7 +206,7 @@ double exfcpp(svi egosVect, svi altersVect, int seed){
   svii i,j; // iterators over the neighbors of the seed
   double clustFI=0.0, totalFI=0.0; // cluster FI and total FI
   std::vector<double>  FIvalues; // the vector of FI values
-  FIvalues.reserve(1000); // faster to use a constant that to guestimate
+  FIvalues.reserve(10000); // faster to use a constant that to guestimate
   ///////////////////////////////////////////////////////////////
   // Iterate over all possible clusters of size 2 (plus the seed).
   // The iteration is over all nodes at distance one from the source,
