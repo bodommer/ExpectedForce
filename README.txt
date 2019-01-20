@@ -20,6 +20,6 @@ main.cpp loads a graph from a (number of) text file(s) and calculate the expecte
 2  0
 2  1
 
-stdafx.h is an header for various useful libraries and the exfccp function.
+stdafx.h is an header for standard libraries and the exfccp function.
 
 fb_full.txt is a test graph. 
