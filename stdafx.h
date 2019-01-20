@@ -1,7 +1,5 @@
 #pragma once
 
-#include "targetver.h"
-#include "Snap.h"
 #include <vector>
 #include <string>
 #include <iostream>

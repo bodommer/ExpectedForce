@@ -30,6 +30,7 @@
  creates more complex code.
  */
 
+#include <math.h>
 #include <algorithm>
 #include <vector>
 #include <queue>
@@ -109,7 +110,7 @@ int get_neighbors(svi & dOne, svi & dTwo,
   q.push(seed);
   visited[seed]=1;
   distance[seed]=0;
-  //std::cout<<egostart.size();
+  //std::cout<<egostart.size() << std::endl;
   while(! q.empty()){ // run the BFS
     curN=q.front(); q.pop();  // grab the next node 
     //std::cout<<curN<<"  "<<distance[curN]<<std::endl;
@@ -215,7 +216,7 @@ double exfcpp(svi egosVect, svi altersVect, int seed){
     tmp[1]=*i;
     for(j=i+1;j!=dOne.end();j++){ // the remaining dOne nodes
       tmp[2]=*j;
-      clustFI=cluster_degree(tmp,egostart,egoend,altersVect);
+	  clustFI=cluster_degree(tmp,egostart,egoend,altersVect);
       // add it once for each way the cluster could form
       FIvalues.push_back(clustFI); totalFI+=clustFI;
       FIvalues.push_back(clustFI); totalFI+=clustFI;

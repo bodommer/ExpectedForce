@@ -1,71 +1,73 @@
 #include "stdafx.h"
-using std::cin;
-using std::cout;
-using std::endl;
 
-typedef std::vector<int> svi;
-typedef std::vector<int>::iterator svii;
-typedef TUNGraph::TNodeI nodeI;
+using namespace std;
+
+typedef vector<int> svi;
+typedef vector<int>::iterator svii;
 
 /* HELPER FUNCTION
-Converts a SNAP undirected graph to a sorted edgelist.
+Converts a sorted, full edgelist text file to a vector edgelist.
  @param[out] egos, alters: The edgelist.
- @param[in] G: The SNAP graph.
+ @param[in] infilename: The edgelist file.
 */
-int snap_to_edgelist(svi &egos, svi &alters,
-	const PUNGraph G) {
+int read_snap_format(svi &egos, svi &alters,
+	string infilename) {
 	egos.clear(); alters.clear();
-	int node_id, node_deg = 0;
-	for (nodeI NI = G->BegNI(); NI < G->EndNI(); NI++) { //iterates over nodes
-		node_id = NI.GetId();
-		node_deg = NI.GetDeg();
-		for (int out_cnt = 0; out_cnt < node_deg; out_cnt++) { //iterates over outgoing edges
-			//augments the edgelist
-			egos.push_back(node_id);
-			alters.push_back(NI.GetOutNId(out_cnt));
-			//std::cout << node_id << " - " << NI.GetOutNId(out_cnt) << "\n"; //prints edges
+
+	ifstream infile;
+	infile.open(infilename);
+	string temp;
+	
+	int last_node = -1;
+	int node_count = 0;
+
+	while (getline(infile, temp, ' ')) {
+		
+		if (stoi(temp) != last_node) { //conta i nodi diversi
+			node_count++;
+			last_node = stoi(temp);
 		}
+
+		egos.push_back(stoi(temp)); //out node
+	
+
+		getline(infile, temp);
+		alters.push_back(stoi(temp)); //in node
 	}
-	return 0;
+	//cout << node_count << endl;
+
+	return node_count;
 }
 
 
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) { //takes filenames (es: fb_full) as inputs; print their ExF in filename_result.txt 
 
-	cout << "This program determines the Expected Force of every node in a graph.\n Loads from the binary file 'test.graph'.\n Stores the results in 'results.txt'" << endl;
-	system("pause");
-
-	//load a SNAP graph from a SNAP binary file
-	TFIn FIn("test.graph"); 
-	PUNGraph G = TUNGraph::Load(FIn);
+	cout << "This program determines the Expected Force of every node for each graph.\n Stores the results in 'FILENAME_results.txt'" << endl;
 	
-	/*
-	// alternatively, generate a 100 nodes network using Forest Fire model
-	PNGraph H = TSnap::GenForestFire(100, 0.35, 0.35);
-	// convert to undirected graph
-	PUNGraph G = TSnap::ConvertGraph<PUNGraph>(H);
-	{ TFOut FOut("test.graph"); G->Save(FOut); } //save graph in binary form
-	*/
-
-	int nNodes;
-	nNodes = G->GetNodes(); //number of nodes
-
 	svi egosVect, altersVect;                
-	snap_to_edgelist(egosVect, altersVect, G); //converts SNAP graph to sorted edgelist.
+	for (int j = 1; j < argc; j++) {
+		string filename = (argv[j]);
+		
+		//reads graph
+		int node_count = read_snap_format(egosVect, altersVect, filename + ".txt"); //converts SNAP graph to sorted edgelist.
+		//TODO: check if edgelist is full and sorted 
 
-	std::ofstream outfile;
-	outfile.open("results.txt");
-	
-	double EXF;
-	for (int i = 0; i < nNodes; i++){
-		//calculates and prints on file the Expected Force of each node
-		EXF = exfcpp(egosVect, altersVect, i);
-		outfile << std::to_string(i) << "  " << std::to_string(EXF) << endl;
+		ofstream outfile;
+		outfile.open(filename + "_results.txt");
+		cout << "Evaluating Expected Force for graph '" + filename + "'"<< endl;
+		
+		double EXF;
+		for (int i = 0; i < node_count; i++) {
+			//calculates and prints on file the Expected Force for each node
+			EXF = exfcpp(egosVect, altersVect, i);
+			outfile << std::to_string(i) << "  " << std::to_string(EXF) << endl;
+			//notificate progress
+			cout << i + 1 << "out of" << node_count << endl;
+		}
+		outfile.close();
+		cout << "Results saved as '" << filename << "_results.txt'" << endl;
 	}
-	outfile.close();
-	cout << "Results saved as 'results.txt'" << endl;
-	system("pause");
 
 	return 0;
 }
