@@ -5,7 +5,7 @@ exffunction.cpp copyright Glenn Lawyer, 2013.
 USAGE via Makefile
 "make all" will compile and test the code.
 
-"make compile" will compile the code and create executable named ExfForce. 
+"make compile" will compile the code and create executable named ExpForce. 
 
 "make run_test" will run a test on the graph stored in "fb_full.txt" and produce a result file "fb_full_results.txt".
 
