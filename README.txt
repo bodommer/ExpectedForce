@@ -12,9 +12,9 @@ USAGE via Makefile
 ---------------------------------------------------------------
 GENERAL USAGE
 Once compiled, an executable named ExpForce should appear. 
-Execute it with any number of filenames as arguments (omit the ".txt" extension).
+Execute it with any number of filenames as arguments;
 
-example: ./ExpForce fb_full , where fb_full.txt contains a full, sorted edgelists such as
+example: ./ExpForce fb_full.txt , where fb_full.txt contains a full, sorted edgelists such as
 0  2
 1  2
 2  0
@@ -25,7 +25,7 @@ example: ./ExpForce fb_full , where fb_full.txt contains a full, sorted edgelist
 CONTENTS
 exffunction.cpp is the Glenn Lawyer original function. Calculates the expected force of a node.
 
-main.cpp loads a graph from a (number of) text file(s) and calculate the expected force of the nodes.
+main.cpp loads a graph from a text file and calculate the expected force of the nodes.
 
 stdafx.h is an header for standard libraries and the exfccp function.
 
