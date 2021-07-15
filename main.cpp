@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 	
 	svi egosVect, altersVect;                
 	string filename = argv[1];
-	string delimiter = argv[2];
+	char delimiter = argv[2];
 	int ignore_weights = stoi(argv[3]);
 		
 	//reads graph
