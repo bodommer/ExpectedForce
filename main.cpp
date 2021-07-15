@@ -11,7 +11,7 @@ Converts a sorted, full edgelist text file to a vector edgelist.
  @param[in] infilename: The edgelist file.
 */
 int read_snap_format(svi &egos, svi &alters,
-	string infilename, string delimiter = ' ', remove_weights = false) 
+	string infilename, char delimiter = ' ', remove_weights = false) 
 {
 	egos.clear(); alters.clear();
 
