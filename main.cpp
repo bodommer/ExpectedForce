@@ -52,11 +52,10 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 	
 	svi egosVect, altersVect;                
 	string filename = argv[1];
-	char delimiter = argv[2][0];
-	int ignore_weights = stoi(argv[3]);
+	int ignore_weights = stoi(argv[2]);
 		
 	//reads graph
-	int node_count = read_snap_format(egosVect, altersVect, filename, delimiter, ignore_weights); //converts SNAP graph to sorted edgelist.
+	int node_count = read_snap_format(egosVect, altersVect, filename, ' ', ignore_weights); //converts SNAP graph to sorted edgelist.
 	//TODO: check if edgelist is full and sorted 
 
 	ofstream outfile;
