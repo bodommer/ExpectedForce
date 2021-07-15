@@ -11,7 +11,7 @@ Converts a sorted, full edgelist text file to a vector edgelist.
  @param[in] infilename: The edgelist file.
 */
 int read_snap_format(svi &egos, svi &alters,
-	string infilename, string delimiter = ' ') 
+	string infilename, string delimiter = ' ', remove_weights = false) 
 {
 	egos.clear(); alters.clear();
 
@@ -28,10 +28,14 @@ int read_snap_format(svi &egos, svi &alters,
 			node_count++;
 			last_node = stoi(temp);
 		}
-
+		
 		egos.push_back(stoi(temp)); //out node
-	
-
+		
+		if(remove_weights)
+		{
+			getline(infile, temp, delimiter);
+		}
+		
 		getline(infile, temp);
 		alters.push_back(stoi(temp)); //in node
 	}
@@ -42,33 +46,35 @@ int read_snap_format(svi &egos, svi &alters,
 
 
 
-int main(int argc, char* argv[]) { //takes filenames (es: fb_full) as inputs; print their ExF in filename_result.txt 
+int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; print its ExF in result.txt 
 
 	cout << "This program determines the Expected Force of every node for each graph.\n Stores the results in 'FILENAME_results.txt'" << endl;
 	
 	svi egosVect, altersVect;                
-	for (int j = 1; j < argc; j++) {
-		string filename = (argv[j]);
+	string filename = argv[1];
+	string delimiter = argv[2];
+	bool ignore_weights = stoi(argv[3]);
 		
-		//reads graph
-		int node_count = read_snap_format(egosVect, altersVect, filename); //converts SNAP graph to sorted edgelist.
-		//TODO: check if edgelist is full and sorted 
+	//reads graph
+	int node_count = read_snap_format(egosVect, altersVect, filename, delimiter, ignore_weights); //converts SNAP graph to sorted edgelist.
+	//TODO: check if edgelist is full and sorted 
 
-		ofstream outfile;
-		outfile.open("results.txt");
-		cout << "Evaluating Expected Force for graph '" + filename + "'"<< endl;
-		
-		double EXF;
-		for (int i = 0; i < node_count; i++) {
-			//calculates and prints on file the Expected Force for each node
-			EXF = exfcpp(egosVect, altersVect, i);
-			outfile << std::to_string(i) << "  " << std::to_string(EXF) << endl;
-			//notificate progress
-			cout << i + 1 << "out of" << node_count << endl;
-		}
-		outfile.close();
-		cout << "Results saved as results.txt'" << endl;
+	ofstream outfile;
+	outfile.open("results.txt");
+	cout << "Evaluating Expected Force for graph '" + filename + "'"<< endl;
+
+	double EXF;
+	for (int i = 0; i < node_count; i++) 
+	{
+		//calculates and prints on file the Expected Force for each node
+		EXF = exfcpp(egosVect, altersVect, i);
+		outfile << std::to_string(i) << "  " << std::to_string(EXF) << endl;
+		//notificate progress
+		cout << i + 1 << "out of" << node_count << endl;
 	}
+	
+	outfile.close();
+	cout << "Results saved as results.txt'" << endl;
 
 	return 0;
 }
