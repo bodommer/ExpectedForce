@@ -11,7 +11,7 @@ Converts a sorted, full edgelist text file to a vector edgelist.
  @param[in] infilename: The edgelist file.
 */
 int read_snap_format(svi &egos, svi &alters,
-	string infilename, char delimiter = ' ', remove_weights = false) 
+	string infilename, char delimiter = ' ', int ignore_weights = 0) 
 {
 	egos.clear(); alters.clear();
 
@@ -31,7 +31,7 @@ int read_snap_format(svi &egos, svi &alters,
 		
 		egos.push_back(stoi(temp)); //out node
 		
-		if(remove_weights)
+		if(ignore_weights)
 		{
 			getline(infile, temp, delimiter);
 		}
@@ -53,7 +53,7 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 	svi egosVect, altersVect;                
 	string filename = argv[1];
 	string delimiter = argv[2];
-	bool ignore_weights = stoi(argv[3]);
+	int ignore_weights = stoi(argv[3]);
 		
 	//reads graph
 	int node_count = read_snap_format(egosVect, altersVect, filename, delimiter, ignore_weights); //converts SNAP graph to sorted edgelist.
