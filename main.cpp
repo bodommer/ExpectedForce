@@ -11,7 +11,8 @@ Converts a sorted, full edgelist text file to a vector edgelist.
  @param[in] infilename: The edgelist file.
 */
 int read_snap_format(svi &egos, svi &alters,
-	string infilename) {
+	string infilename, string delimiter = ' ') 
+{
 	egos.clear(); alters.clear();
 
 	ifstream infile;
@@ -21,7 +22,7 @@ int read_snap_format(svi &egos, svi &alters,
 	int last_node = -1;
 	int node_count = 0;
 
-	while (getline(infile, temp, ' ')) {
+	while (getline(infile, temp, delimiter)) {
 		
 		if (stoi(temp) != last_node) { //conta i nodi diversi
 			node_count++;
@@ -50,11 +51,11 @@ int main(int argc, char* argv[]) { //takes filenames (es: fb_full) as inputs; pr
 		string filename = (argv[j]);
 		
 		//reads graph
-		int node_count = read_snap_format(egosVect, altersVect, filename + ".txt"); //converts SNAP graph to sorted edgelist.
+		int node_count = read_snap_format(egosVect, altersVect, filename); //converts SNAP graph to sorted edgelist.
 		//TODO: check if edgelist is full and sorted 
 
 		ofstream outfile;
-		outfile.open(filename + "_results.txt");
+		outfile.open("results.txt");
 		cout << "Evaluating Expected Force for graph '" + filename + "'"<< endl;
 		
 		double EXF;
@@ -66,7 +67,7 @@ int main(int argc, char* argv[]) { //takes filenames (es: fb_full) as inputs; pr
 			cout << i + 1 << "out of" << node_count << endl;
 		}
 		outfile.close();
-		cout << "Results saved as '" << filename << "_results.txt'" << endl;
+		cout << "Results saved as results.txt'" << endl;
 	}
 
 	return 0;
