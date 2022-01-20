@@ -1,3 +1,0 @@
-../exp_force_main.cu(49): error: identifier "vertex_offset" is undefined
-
-1 error detected in the compilation of "../exp_force_main.cu".

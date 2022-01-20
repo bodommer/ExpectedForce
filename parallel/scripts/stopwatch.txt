@@ -1,0 +1,108 @@
+Evaluating file ../new_fb_full.txt
+Time in ms (540, 1024):
+15898033
+Evaluating file ../new_fb_full.txt
+Time in ms (540, 1024):
+15888673
+Evaluating file ../new_fb_full.txt
+Time in ms (540, 1024):
+15903848
+Evaluating file ../new_fb_full.txt
+Time in ms (1024, 1024):
+15905132
+Evaluating file ../new_fb_full.txt
+Time in ms (1024, 1024):
+15857278
+Evaluating file ../new_fb_full.txt
+Time in ms (1024, 1024):
+15862725
+Evaluating file ../new_fb_full.txt
+Time in ms (2048, 1024):
+15788063
+Evaluating file ../new_fb_full.txt
+Time in ms (2048, 1024):
+15844630
+Evaluating file ../new_fb_full.txt
+Time in ms (2048, 1024):
+15904125
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 256):
+1128372
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 256):
+1128201
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 256):
+1126852
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 256):
+1127956
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 256):
+1127219
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 256):
+1128471
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 256):
+1127536
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 256):
+1127101
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 256):
+1129377
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 512):
+1129035
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 512):
+1128060
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 512):
+1130003
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 512):
+1128041
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 512):
+1127475
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 512):
+1128067
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 512):
+1127136
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 512):
+1129253
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 512):
+1127858
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 1024):
+1128850
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 1024):
+1127490
+Evaluating file ../test_edgelist.txt
+Time in ms (32, 1024):
+1127296
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 1024):
+1127474
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 1024):
+1127720
+Evaluating file ../test_edgelist.txt
+Time in ms (64, 1024):
+1130341
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 1024):
+1127623
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 1024):
+1128429
+Evaluating file ../test_edgelist.txt
+Time in ms (128, 1024):
+1128472

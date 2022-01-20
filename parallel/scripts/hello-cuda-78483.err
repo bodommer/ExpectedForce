@@ -1,4 +1,0 @@
-../exp_force_main.cu(243): error: no instance of overloaded function "std::max" matches the argument list
-            argument types are: (int, std::size_t)
-
-1 error detected in the compilation of "../exp_force_main.cu".

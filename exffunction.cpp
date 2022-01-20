@@ -242,9 +242,13 @@ double exfcpp(svi egosVect, svi altersVect, int seed){
   double normalizedFI, ExF(0); 
   //std::cout<<"clust degs: ";
   //std::cout << seed << ": " << totalFI << std::endl;
+      std::cout << seed << ": " << totalFI << std::endl;
   for(std::vector<double>::iterator i=FIvalues.begin();i!=FIvalues.end();i++){
     //std::cout<<*i<<" ";
     normalizedFI =*i/totalFI;
+    // if (seed == 152) {
+    //       std::cout << -(log(normalizedFI)*normalizedFI) << std::endl;
+    //   }
     ExF -= (log(normalizedFI)*normalizedFI);
   }
   //std::cout<<std::endl;

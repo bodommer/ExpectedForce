@@ -1,5 +1,0 @@
-../exp_force_main.cu(551): error: identifier "cout" is undefined
-
-../exp_force_main.cu(551): warning: label "std" was declared but never referenced
-
-1 error detected in the compilation of "../exp_force_main.cu".

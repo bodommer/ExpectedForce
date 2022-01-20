@@ -9,12 +9,9 @@
 #include <utility> // pair
 #include <math.h> // ceil
 
-//using namespace std;
-
 // for debugging only
-#define OBSERVED_NODE 149
-
-#define DEBUG 1
+#define OBSERVED_NODE -1
+#define DEBUG 0
 
 typedef std::vector<int> int_vector;
 typedef std::vector<std::pair<int, int>> pair_vector;
@@ -28,6 +25,9 @@ struct graph_data_t {
     int cluster_count;
 } graph_summary;
 
+/**
+ * Kernel for generating all paths of length 2 in the graph and calculating the cluster sizes.
+ */
 __global__ void GeneratePairs(int* indexes, int* neighbors, int* vertex_start, int* pairs, int* vertex_length, int* cluster_sizes, int* cluster_starts, int vertex_count, int maxNum, int vertexOffset, int neighborOffset) {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
 
@@ -35,21 +35,12 @@ __global__ void GeneratePairs(int* indexes, int* neighbors, int* vertex_start, i
         return;
     }
 
-    if(i == 0) {
-        for (int j = 0; j < vertex_count; j++) {
-            printf("%d: %d\n", j, indexes[j]);
-        }
-    }
-
     // search in an 'interval tree' to map onto correct vertex's combinations
-    int index = vertex_count / 2;
+    int index = 0;
     int array_start = 0;
     int array_size = vertex_count - 1;
-    while (true) {
-        // int normalized_index = vertex_length[vertexOffset] + indexes[index];
-        // if (i == 13) {
-        //     printf("Normalized index: %d\n", normalized_index);
-        // }
+    while (array_start <= array_size) {
+        index = (array_start + array_size) / 2;
         if (indexes[index] == i || (indexes[index] < i && indexes[index + 1] > i) || (indexes[index] < i && index == vertex_count - 1)) {
             for (int j = index; j < vertex_count - 2; j++){
                 if (indexes[j] == indexes[j + 1]) {
@@ -60,14 +51,11 @@ __global__ void GeneratePairs(int* indexes, int* neighbors, int* vertex_start, i
             }
             break;
         }
-
         if (indexes[index] < i) {
-            array_start = index;
+            array_start = index + 1;
         } else {
-            array_size /= 2;
+            array_size = index - 1;
         }
-        // middle of half-array
-        index = (2 * array_start + array_size) / 2; 
     }
 
     int pair_combination = i - indexes[index];
@@ -84,24 +72,15 @@ __global__ void GeneratePairs(int* indexes, int* neighbors, int* vertex_start, i
     int cluster_size = vertex_length[neighbor_one] + vertex_length[neighbor_two] + vertex_length[vertexOffset + index] - 4;
     cluster_sizes[i] = cluster_size;
 
-    //printf("Vertex: %d\n", index + vertexOffset);
-
-    // if (index + vertexOffset == OBSERVED_NODE) {
-    //     printf("%d: Length: %d, Neighbor one: %d, neighbor");
-    // }
-
     // middle vertex and two neighbors
     cluster_starts[cluster_index] = vertexOffset + index;
     cluster_starts[cluster_index + 1] = neighbor_one;
     cluster_starts[cluster_index + 2] = neighbor_two;
-
-    // debug print
-    if ((neighbor_one == OBSERVED_NODE || neighbor_two == OBSERVED_NODE || vertexOffset + index == OBSERVED_NODE) && DEBUG) {
-        printf("Cluster of size %d for nodes %d-%d-%d\n", cluster_size, neighbor_one, neighbor_two, vertexOffset + index);
-        printf("Vertex start: %d, prev vertex start: %d, Neighbor offset: %d, edge_one: %d, edge_two: %d, pair_combination = %d\n", vertex_start[index], vertex_start[index-1], neighborOffset, edge_one, edge_two, pair_combination);
-    }
 }
 
+/**
+ * Calculates the expected force for the cluster.
+ */
 __global__ void CountClusterExpectedForce(int* cluster_size, int* cluster_start, int* total_vertex_size, float* output, int maxNum, int vertex_count, int offset) {
 
     int i = blockDim.x * blockIdx.x + threadIdx.x;
@@ -117,6 +96,9 @@ __global__ void CountClusterExpectedForce(int* cluster_size, int* cluster_start,
     output[i] = -(__logf(normalized) * (normalized));
 }
 
+/**
+ * Reads the graph.
+ */
 void read_graph(int_vector &vertex_start, int_vector &vertex_length, int_vector &neighbors, set_vector &neighbor_sets, std::string infilename, char delimiter = ' ', int ignore_weights = 0) 
 {
 	vertex_start.clear(); 
@@ -140,9 +122,6 @@ void read_graph(int_vector &vertex_start, int_vector &vertex_length, int_vector 
         node_count++;
 
 		if (node != last_node) {
-            if (node - last_node > 1) {
-                std::cout << "ERROR " << node << std::endl;
-            }
             if (vertex_count != 0) {
                 vertex_length.push_back(vertex_count);
                 vertex_start.push_back(node_count-1);
@@ -161,7 +140,6 @@ void read_graph(int_vector &vertex_start, int_vector &vertex_length, int_vector 
             // edge to itself, e.g. 1->1
             vertex_count--;
             node_count--;
-            std::cout << "Skipping edge " << neighbor << " - " << neighbor << std::endl;
         } else {
             // normal case
             neighbors.push_back(neighbor); 
@@ -174,6 +152,9 @@ void read_graph(int_vector &vertex_start, int_vector &vertex_length, int_vector 
     neighbor_sets.push_back(neighbor_set);
 }
 
+/**
+ * Generates pair combinations in 2 values i-j, where i is i-th neighbor of source vertex and j is the source vertex's j-th neighbor.
+ */
 void generate_pairs(int_vector &pairs, int_vector &pair_count, int highest_degree) {
     pairs.clear();
     pair_count.clear();
@@ -195,6 +176,9 @@ void generate_pairs(int_vector &pairs, int_vector &pair_count, int highest_degre
     }
 }
 
+/**
+ * Splits all vertices in graph into chunks that can be computed at once. Also calculates several other properties of the graph.
+ */
 void split_into_generating_chunks(int_vector &generating_chunks, int_vector &vertex_length, int_vector &pair_count, int_vector &chunk_size, int_vector &cluster_start, interval_tree &intervals, int blocks, int threads) {
     int cluster_count = 0;
     int size = 0;
@@ -208,10 +192,10 @@ void split_into_generating_chunks(int_vector &generating_chunks, int_vector &ver
 
     for (int i = 0; i < vertex_length.size(); i++) {
         cluster_start.push_back(cluster_count);
-        
+
         int vertex_combinations = pair_count[vertex_length[i]];
         cluster_count += vertex_combinations;
-        if (size + vertex_combinations > limit) {
+        if (size + vertex_combinations > limit || vertex_combinations > limit) {
             if (current_vertices == 0) {
                 std::invalid_argument("Insufficient size of blocks and threads for generating chunks. Required combined size at least " + std::to_string(vertex_combinations) + ".");
             }
@@ -221,11 +205,10 @@ void split_into_generating_chunks(int_vector &generating_chunks, int_vector &ver
             longest_neighbor_seq = std::max(longest_neighbor_seq, neighbors_in_chunk);
             generating_chunks.push_back(chunk_start);
             chunk_start += current_vertices;
-            generating_chunks.push_back(chunk_start);
-            chunk_start++;
-            current_vertices = 0;
+            generating_chunks.push_back(chunk_start - 1);
+            current_vertices = 1;
             size = vertex_combinations;
-            indexes = std::vector<int>(0);
+            indexes = std::vector<int>(1, 0);
             neighbors_in_chunk = vertex_length[i];
         } else {
             indexes.push_back(size);
@@ -244,16 +227,14 @@ void split_into_generating_chunks(int_vector &generating_chunks, int_vector &ver
         longest_neighbor_seq = std::max(longest_neighbor_seq, neighbors_in_chunk);
     }
 
-    for (int i = 0; i < generating_chunks.size(); i += 2) {
-        std::cout << generating_chunks[i] << "-" << generating_chunks[i+1] << " ";
-    }
-    std::cout << std::endl;
-
     graph_summary.biggest_chunk = biggest_chunk;
     graph_summary.longest_neighbor_seq = longest_neighbor_seq;
     graph_summary.cluster_count = cluster_count;
 }
 
+/**
+ * Checks for cuda errors, logs if there is any error and finishes execution.
+ */
 void check_error() {
         cudaError_t error = cudaGetLastError();
         if (error != cudaSuccess) {
@@ -262,36 +243,48 @@ void check_error() {
     }
 }
 
+/**
+ * Entry function, parameters: 
+ * - filename: name fo the file whence the graph shall be read
+ * - blocks - nubmer of blocks to be used
+ * - threads - number of threads per block to be used, max. 1024 (GPU limitation)
+ * - streams - 1..n
+ */
 int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; print its ExF in result.txt 
 
 	//cout << "This program determines the Expected Force of every node for each graph.\n Stores the results in 'FILENAME_results.txt'" << endl;
 	
-    int blocks = 4;
-    int threads = 128;
-    int streamCount = 2;
+    if(argc < 5) {
+        std::cout << "Insufficient number of arguments: " << argc << std::endl;
+        exit(3);
+    }
+
+    std::string filename = argv[1];
+    int blocks = atoi(argv[2]);
+    int threads = atoi(argv[3]);
+    int streamCount = atoi(argv[4]);
 
     int_vector vertex_start, vertex_length, neighbors, pairs, pair_count, generating_chunks, chunk_size, path_vertex_one, cluster_start;
     interval_tree intervals;
     set_vector neighbor_sets;
 
-    std::string filename = argv[1];
-    int ignore_weights = std::stoi(argv[2]);
+    //int ignore_weights = std::stoi(argv[2]);
 
     std::cout << "Evaluating file " << filename << std::endl;
 
-    //int64_t duration;
-    //int repetitions = 5;
+    int64_t duration;
+    int repetitions = 5;
 
-    //for (int i = 0; i < repetitions; i++) {
+    //reads graph
+    read_graph(vertex_start, vertex_length, neighbors, neighbor_sets, filename, ' ', 1); //converts graph to a v-graph-like structure
 
-        //reads graph
-        read_graph(vertex_start, vertex_length, neighbors, neighbor_sets, filename, ' ', ignore_weights); //converts SNAP graph to sorted edgelist.
+    for (int i = 0; i < repetitions; i++) {
+
+        auto start = std::chrono::high_resolution_clock::now();
 
         int highest_degree = *std::max_element(vertex_length.begin(), vertex_length.end());
 
         generate_pairs(pairs, pair_count, highest_degree);
-
-        std::cout << "Generating chunks" << std::endl;
 
         split_into_generating_chunks(generating_chunks, vertex_length, pair_count, chunk_size, cluster_start, intervals, blocks, threads);
 
@@ -308,7 +301,6 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
         std::vector<int*> host_cluster_start_pointers;
         for (int i = 0; i < streamCount; i++) {
             cudaStreamCreate(&streams[i]);
-            std::cout << "stream created" << std::endl;
             check_error();
 
             int* index_ptr;
@@ -316,15 +308,12 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
             index_pointers.push_back(index_ptr);
             
             int* vertex_start_ptr;
-            std::cout << "Allocating " << sizeof(int) * biggest_chunk << "B of data for vertex_start_ptr" << std::endl;
             cudaMalloc((void**)&vertex_start_ptr, sizeof(int) * biggest_chunk);
             vertex_start_pointers.push_back(vertex_start_ptr);
-            std::cout << "Allocated for vertex start: " << sizeof(int) * biggest_chunk << std::endl;
 
             int* neighbor_ptr;
             cudaMalloc((void**)&neighbor_ptr, sizeof(int) * most_neighbors);
             neighbor_pointers.push_back(neighbor_ptr);
-            std::cout << "Most neighbors: " << most_neighbors << std::endl;
 
             int* cluster_size_ptr;
             cudaMalloc((void**)&cluster_size_ptr, sizeof(int) * graph_summary.cluster_count);
@@ -340,81 +329,57 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
             int* host_cluster_start_ptr = (int*) malloc(sizeof(int) * graph_summary.cluster_count * 3);
             host_cluster_start_pointers.push_back(host_cluster_start_ptr);
         }
-        std::cout << "Pointer vectors allocated" << std::endl;
         check_error();
 
         int* pairs_ptr;
         cudaMalloc((void**)&pairs_ptr, sizeof(int) * pairs.size());
         cudaMemcpy(pairs_ptr, pairs.data(), sizeof(int) * pairs.size(), cudaMemcpyHostToDevice);
-        std::cout << "Pairs pointer allocated" << std::endl;
         check_error();
 
         int* length_ptr;
         cudaMalloc((void**)&length_ptr, sizeof(int) * vertex_length.size());
         cudaMemcpy(length_ptr, vertex_length.data(), sizeof(int) * vertex_length.size(), cudaMemcpyHostToDevice);
-        std::cout << "Length pointer allocated" << std::endl;
         check_error();
 
         std::vector<int> cluster_sizes;
         std::vector<int> start_vertex;
         std::vector<int> total_cluster_size(vertex_length.size(), 0);
-        
-        std::cout << "Number of chunks: " << generating_chunks.size() << std::endl;
 
         for (int index = 0; index < generating_chunks.size(); index += 2 * streamCount) {
-            std::cout << "Computing chunk " << index / 2 + 1 << " of " << generating_chunks.size() / 2 << std::endl;
             int streamsUsed = std::min((int) (generating_chunks.size() / 2) - index/2, streamCount);
-            std::cout << "Streams used: " << streamsUsed << std::endl;
             for (int i = 0; i < streamsUsed; i++) {
                 int chunk_index = index + 2 * i;
                 int chunk_start = generating_chunks[chunk_index];
                 int chunk_end = generating_chunks[chunk_index + 1];
                 int number_of_clusters = cluster_start[chunk_end] + pair_count[vertex_length[chunk_end]] - cluster_start[chunk_start];
-                std::cout << "chunk start " << chunk_start << std::endl;
-                std::cout << "chunk end " << chunk_end << std::endl;
-                std::cout << "last chunk start " << vertex_start[chunk_end] << std::endl;
-                std::cout << "last neighbor " << vertex_start[chunk_end] + vertex_length[chunk_end] - 1 << std::endl;
                 int neighbor_size = vertex_start[chunk_end] + vertex_length[chunk_end] - vertex_start[chunk_start];
-                std:: cout << "Neighbor size: " << neighbor_size << std::endl;
 
-                cudaMemcpyAsync(index_pointers[i], intervals[index/2].data(), sizeof(int) * intervals[index/2].size(), cudaMemcpyHostToDevice);
-                std::cout << "Indexes copied" << std::endl;
+                cudaMemcpyAsync(index_pointers[i], intervals[index/2 + i].data(), sizeof(int) * intervals[index/2 + i].size(), cudaMemcpyHostToDevice);
                 check_error();
 
-                std::cout << "Copying " << sizeof(int) * (chunk_end - chunk_start + 1) << "B of data" << std::endl;
-                std::cout << "Start of last vertex: " << vertex_start[chunk_end] << std::endl;
                 cudaMemcpy(vertex_start_pointers[i], vertex_start.data() + chunk_start, sizeof(int) * (chunk_end - chunk_start + 1), cudaMemcpyHostToDevice);
-                std::cout << "Vertex starts copied" << std::endl;
                 check_error();
 
-                std::cout << "Copying vertex starts from " << vertex_start[chunk_start] << " with length of " << neighbor_size << std::endl;
                 cudaMemcpy(neighbor_pointers[i], neighbors.data() + vertex_start[chunk_start], sizeof(int) * neighbor_size, cudaMemcpyHostToDevice);
-                std::cout << "Neighbors copied" << std::endl;
                 check_error();
 
                 GeneratePairs<<<blocks, threads, 0, streams[i]>>>(index_pointers[i], neighbor_pointers[i], vertex_start_pointers[i], pairs_ptr, length_ptr, cluster_size_pointers[i], cluster_start_pointers[i], chunk_end - chunk_start + 1, number_of_clusters, chunk_start, vertex_start[chunk_start]);
                 cudaDeviceSynchronize();
-                std::cout << "Generation finished" << std::endl;
                 check_error();
 
-                std::cout << "Copieeed clusters: " << number_of_clusters << std::endl;
-                cudaMemcpyAsync(host_cluster_size_pointers[i], cluster_size_pointers[i], sizeof(int) * number_of_clusters, cudaMemcpyDeviceToHost);
-                std::cout << "host cluster sizes copied" << std::endl;
+                cudaMemcpy(host_cluster_size_pointers[i], cluster_size_pointers[i], sizeof(int) * number_of_clusters, cudaMemcpyDeviceToHost);
                 check_error();
 
-                cudaMemcpyAsync(host_cluster_start_pointers[i], cluster_start_pointers[i], sizeof(int) * number_of_clusters * 3, cudaMemcpyDeviceToHost);
-                std::cout << "host cluster starts copied" << std::endl;
+                cudaMemcpy(host_cluster_start_pointers[i], cluster_start_pointers[i], sizeof(int) * number_of_clusters * 3, cudaMemcpyDeviceToHost);
                 check_error();
             }
-
-            std::cout << "Pairs Generated" << std::endl;
             check_error();
 
             cudaDeviceSynchronize();
 
             for (int i = 0; i < streamsUsed; i++) {
                 int* path_ptr = host_cluster_start_pointers[i];
-                int chunk_index = 2 * (index + i);
+                int chunk_index = index + 2 * i;
                 int chunk_start = generating_chunks[chunk_index];
                 int chunk_end = generating_chunks[chunk_index + 1];
                 int number_of_clusters = cluster_start[chunk_end] + pair_count[vertex_length[chunk_end]] - cluster_start[chunk_start];
@@ -431,11 +396,6 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
                         cluster_size -= 2;
                     }
 
-                    if (source_vertex == OBSERVED_NODE && DEBUG) {
-                        std::cout << "Cluster " << OBSERVED_NODE << ", size: " << cluster_size << std::endl;
-                    }
-
-                    //std::cout << "Processing cluster starting at " << source_vertex << " with size " << cluster_size << std::endl;
                     cluster_sizes.push_back(cluster_size);
                     cluster_sizes.push_back(cluster_size);
                     cluster_sizes.push_back(cluster_size);
@@ -453,19 +413,6 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
                 }
             }
         }
-
-        std::cout << "Total cluster sizes: " << std::endl;
-        for (int i = 0; i < total_cluster_size.size(); i++) {
-            std::cout << i << ": " << total_cluster_size[i] << std::endl;
-        }
-
-        for (int i = 0; i < start_vertex.size(); i++) {
-            if (start_vertex[i] == OBSERVED_NODE && DEBUG) {
-                std::cout << "i: " << i << ", Cluster size:" << cluster_sizes[i] << " total: " << total_cluster_size[OBSERVED_NODE] << std::endl;
-            }
-        }
-
-        std::cout << "end" << std::endl;
 
         for (int i = 0; i < streamCount; i++) {
             cudaFree(index_pointers[i]);
@@ -501,30 +448,23 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 
         // std::ceil is stupid
         int ceil_share = (int) ((graph_summary.cluster_count * 4 / array_size) + ((graph_summary.cluster_count * 4 % array_size) != 0));
-        std::cout << "Clusters total: " << graph_summary.cluster_count * 4 << ", array_size: " << array_size << std::endl;
-        std::cout << "Ratio: " << ((graph_summary.cluster_count * 4) / array_size) << ", ceil: " << ceil_share << std::endl;
         int chunks = std::max(1, ceil_share);
-
-        std::cout << "Computing normalized force in " << chunks << " chunks" << std::endl;
 
         std::vector<float> normalized_sizes(cluster_sizes.size(), 0);
 
         for (int index = 0; index < chunks; index += streamCount) {
             int streamsUsed = std::min(streamCount, chunks - index);
             for (int i = 0; i < streamsUsed; i++) {
-                int element_count = std::min(array_size, 4 * graph_summary.cluster_count - i * array_size);
-                cudaMemcpyAsync(input_sizes[i], cluster_sizes.data() + i * array_size, sizeof(int) * element_count, cudaMemcpyHostToDevice);
-                cudaMemcpyAsync(input_vertices[i], start_vertex.data() + i * array_size, sizeof(int) * element_count, cudaMemcpyHostToDevice);
+                int element_count = std::min(array_size, 4 * graph_summary.cluster_count - (index + i) * array_size);
+                cudaMemcpyAsync(input_sizes[i], cluster_sizes.data() + (index + i) * array_size, sizeof(int) * element_count, cudaMemcpyHostToDevice);
+                cudaMemcpyAsync(input_vertices[i], start_vertex.data() + (index + i) * array_size, sizeof(int) * element_count, cudaMemcpyHostToDevice);
                 CountClusterExpectedForce<<<blocks, threads, 0, streams[i]>>>(input_sizes[i], input_vertices[i], total_size_ptr, outputs[i], element_count, vertex_length.size(), array_size * i);
-                cudaMemcpyAsync(normalized_sizes.data() + i * array_size, outputs[i], sizeof(float) * element_count, cudaMemcpyDeviceToHost);
+                cudaMemcpyAsync(normalized_sizes.data() + (index + i) * array_size, outputs[i], sizeof(float) * element_count, cudaMemcpyDeviceToHost);
             }
 
             cudaDeviceSynchronize();
-
             check_error();
         }
-
-        std::cout << "Normalized sizes counted, freeing cuda arrays: " << input_sizes.size() << std::endl;
 
         for (int i = 0; i < streamCount; i++) {
             cudaFree(input_sizes[i]);
@@ -535,25 +475,31 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 
             cudaFree(outputs[i]);
             check_error();
+
+            cudaStreamDestroy(streams[i]);
+            check_error();
         }    
-
         cudaFree(total_size_ptr);
-
-        // TODO: deallocate streams
-
-        std::cout << "CUDA pointers deallocated" << std::endl;
 
         std::vector<float> results(vertex_length.size(), 0);
 
-        std::cout << "Starting summation of normalized edges\n" << std::endl;
-
-        for (int i = 0; i < normalized_sizes.size() - 1; i++) {
+        for (int i = 0; i < normalized_sizes.size(); i++) {
             results[start_vertex[i]] += normalized_sizes[i];
         }
 
-        for (int i = 0; i < results.size(); i++) {
-            std::cout << i << ": " << results[i] << std::endl;
-        }
+        auto end = std::chrono::high_resolution_clock::now();
+        auto time = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        duration += time;
+    }
+
+    std::cout << "Time in ms (" << blocks << ", " << threads << ", " << streamCount"):" << std::endl << duration/repetitions << std::endl;
+
+    std::ofstream outfile;
+    outfile.open("results_" + filename);
+
+    for (int i = 0; i < results.size(); i++) {
+        outfile << i << "  " << results[i] << std::endl;
+    }
 
 	return 0;
 }

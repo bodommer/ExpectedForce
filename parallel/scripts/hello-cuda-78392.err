@@ -1,2 +1,0 @@
-/var/lib/slurm-llnl/slurmd/job78392/slurm_script: line 17: nvcc: command not found
-/var/lib/slurm-llnl/slurmd/job78392/slurm_script: line 19: 51337 Segmentation fault      (core dumped) ../output/ExForce ../../test_edgelist.txt 1

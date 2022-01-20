@@ -1,4 +1,0 @@
-../exp_force_main.cu(418): error: no operator "<<" matches these operands
-            operand types are: std::basic_ostream<char, std::char_traits<char>> << std::ostream
-
-1 error detected in the compilation of "../exp_force_main.cu".
