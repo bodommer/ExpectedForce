@@ -39,7 +39,7 @@ int read_snap_format(svi &egos, svi &alters,
 		getline(infile, temp);
 		alters.push_back(stoi(temp)); //in node
 	}
-	//cout << node_count << endl;
+	cout << node_count << endl;
 
 	return node_count;
 }
@@ -50,10 +50,10 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 
 	cout << "This program determines the Expected Force of every node for each graph.\n Stores the results in 'FILENAME_results.txt'" << endl;
 	
-	svi egosVect, altersVect;                
+	svi egosVect, altersVect;
 	string filename = argv[1];
 	int ignore_weights = stoi(argv[2]);
-		
+
 	//reads graph
 	int node_count = read_snap_format(egosVect, altersVect, filename, ' ', ignore_weights); //converts SNAP graph to sorted edgelist.
 	//TODO: check if edgelist is full and sorted 
@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) { //takes a filename (es: fb_full) as input; pr
 		EXF = exfcpp(egosVect, altersVect, i);
 		outfile << std::to_string(i) << "  " << std::to_string(EXF) << endl;
 		//notificate progress
-		cout << i + 1 << "out of" << node_count << endl;
+		cout << i + 1 << " out of " << node_count << endl;
 	}
 	
 	outfile.close();

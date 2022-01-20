@@ -212,6 +212,7 @@ double exfcpp(svi egosVect, svi altersVect, int seed){
   // The iteration is over all nodes at distance one from the source,
   //     within this loop we consider both all remaining dOne nodes
   //     and all dTwo nodes reachable from the current dOne node.
+  int combinations = 0;
   for(i=dOne.begin();i!=dOne.end();i++){ 
     tmp[1]=*i;
     for(j=i+1;j!=dOne.end();j++){ // the remaining dOne nodes
@@ -222,6 +223,7 @@ double exfcpp(svi egosVect, svi altersVect, int seed){
       FIvalues.push_back(clustFI); totalFI+=clustFI;
       for(int edgeindx=egostart[*i];edgeindx<egoend[*i];edgeindx++){ 
 	if(altersVect[edgeindx]==*j){
+    combinations++;
 	  FIvalues.push_back(clustFI); totalFI+=clustFI;
 	  FIvalues.push_back(clustFI); totalFI+=clustFI;
 	}}
@@ -239,6 +241,7 @@ double exfcpp(svi egosVect, svi altersVect, int seed){
   // compute "entropy" of the FI values
   double normalizedFI, ExF(0); 
   //std::cout<<"clust degs: ";
+  //std::cout << seed << ": " << totalFI << std::endl;
   for(std::vector<double>::iterator i=FIvalues.begin();i!=FIvalues.end();i++){
     //std::cout<<*i<<" ";
     normalizedFI =*i/totalFI;

@@ -1,0 +1,2 @@
+malloc(): invalid size (unsorted)
+/var/lib/slurm-llnl/slurmd/job78405/slurm_script: line 19: 52625 Aborted                 (core dumped) ../output/ExForce ../../test_edgelist.txt 1

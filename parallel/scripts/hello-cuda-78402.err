@@ -1,0 +1,6 @@
+../exp_force_main.cu(543): error: identifier "cout" is undefined
+
+../exp_force_main.cu(543): warning: label "std" was declared but never referenced
+
+1 error detected in the compilation of "../exp_force_main.cu".
+/var/lib/slurm-llnl/slurmd/job78402/slurm_script: line 19: 52321 Segmentation fault      (core dumped) ../output/ExForce ../../test_edgelist.txt 1

@@ -1,0 +1,736 @@
+Evaluating file ../new_fb_full.txt
+Generating chunks
+0-107 108-108 109-946 947-1198 1199-1399 1400-1608 1609-1684 1685-1753 1754-1912 1913-1963 1964-2071 2072-2142 2143-2244 2245-2339 2340-2436 2437-2551 2552-2631 2632-3049 3050-3437 3438-4038 
+stream created
+Allocated for vertex start: 3348
+Most neighbors: 20069
+stream created
+Allocated for vertex start: 3348
+Most neighbors: 20069
+Pointer vectors allocated
+Pairs pointer allocated
+Length pointer allocated
+Number of chunks: 40
+Computing chunk 1 of 40
+Streams used: 2
+Neighbor size: 2995
+Indexes copied
+Copying 428B of data
+Start of last vertex: 1950
+Vertex starts copied
+Neighbors copied
+Cluster of size 352 for nodes 153-189-0
+Cluster of size 363 for nodes 153-184-0
+Cluster of size 351 for nodes 153-340-0
+Cluster of size 393 for nodes 153-188-0
+Cluster of size 361 for nodes 153-187-0
+Cluster of size 347 for nodes 153-183-0
+Cluster of size 354 for nodes 153-218-0
+Cluster of size 379 for nodes 153-342-0
+Cluster of size 370 for nodes 153-161-0
+Cluster of size 347 for nodes 153-160-0
+Cluster of size 359 for nodes 153-274-0
+Cluster of size 362 for nodes 153-175-0
+Cluster of size 404 for nodes 153-239-0
+Cluster of size 347 for nodes 153-282-0
+Cluster of size 389 for nodes 153-186-0
+Cluster of size 361 for nodes 153-281-0
+Cluster of size 363 for nodes 153-276-0
+Cluster of size 357 for nodes 153-341-0
+Cluster of size 353 for nodes 153-162-0
+Cluster of size 351 for nodes 153-163-0
+Cluster of size 346 for nodes 153-210-0
+Cluster of size 373 for nodes 153-334-0
+Cluster of size 347 for nodes 153-241-0
+Cluster of size 356 for nodes 153-222-0
+Cluster of size 357 for nodes 153-173-0
+Cluster of size 352 for nodes 153-237-0
+Cluster of size 347 for nodes 153-305-0
+Cluster of size 348 for nodes 153-182-0
+Cluster of size 349 for nodes 153-307-0
+Cluster of size 359 for nodes 153-159-0
+Cluster of size 353 for nodes 153-243-0
+Cluster of size 346 for nodes 153-287-0
+Cluster of size 348 for nodes 153-179-0
+Cluster of size 348 for nodes 153-336-0
+Cluster of size 391 for nodes 153-170-0
+Cluster of size 364 for nodes 153-326-0
+Cluster of size 371 for nodes 153-185-0
+Cluster of size 363 for nodes 153-212-0
+Cluster of size 349 for nodes 153-327-0
+Cluster of size 361 for nodes 153-345-0
+Cluster of size 348 for nodes 153-240-0
+Cluster of size 366 for nodes 153-303-0
+Cluster of size 388 for nodes 153-280-0
+Cluster of size 352 for nodes 153-338-0
+Cluster of size 370 for nodes 153-158-0
+Cluster of size 356 for nodes 153-177-0
+Cluster of size 350 for nodes 153-192-0
+Cluster of size 347 for nodes 153-286-0
+Cluster of size 372 for nodes 153-346-0
+Cluster of size 348 for nodes 153-253-0
+Cluster of size 349 for nodes 153-262-0
+Cluster of size 348 for nodes 153-191-0
+Cluster of size 347 for nodes 153-267-0
+Cluster of size 352 for nodes 153-263-0
+Cluster of size 353 for nodes 153-221-0
+Cluster of size 355 for nodes 153-275-0
+Cluster of size 354 for nodes 153-273-0
+Cluster of size 359 for nodes 153-226-0
+Cluster of size 349 for nodes 153-220-0
+Cluster of size 354 for nodes 153-344-0
+Cluster of size 355 for nodes 153-225-0
+Cluster of size 365 for nodes 153-331-0
+Cluster of size 373 for nodes 153-224-0
+Cluster of size 390 for nodes 153-272-0
+Cluster of size 368 for nodes 153-238-0
+Cluster of size 362 for nodes 153-214-0
+Cluster of size 349 for nodes 153-190-0
+Cluster of size 356 for nodes 153-268-0
+Cluster of size 347 for nodes 153-154-0
+Cluster of size 383 for nodes 153-169-0
+Cluster of size 350 for nodes 153-283-0
+Cluster of size 349 for nodes 153-174-0
+Cluster of size 392 for nodes 153-285-0
+Cluster of size 350 for nodes 153-264-0
+Cluster of size 400 for nodes 153-304-0
+Cluster of size 372 for nodes 153-223-0
+Cluster of size 360 for nodes 153-227-0
+Cluster of size 351 for nodes 153-219-0
+Cluster of size 348 for nodes 153-164-0
+Cluster of size 402 for nodes 153-203-0
+Cluster of size 356 for nodes 153-165-0
+Cluster of size 367 for nodes 153-171-0
+Cluster of size 354 for nodes 153-306-0
+Cluster of size 352 for nodes 153-208-0
+Cluster of size 388 for nodes 153-332-0
+Cluster of size 375 for nodes 153-211-0
+Cluster of size 346 for nodes 153-292-0
+Cluster of size 356 for nodes 153-298-0
+Cluster of size 364 for nodes 153-194-0
+Cluster of size 381 for nodes 153-291-0
+Cluster of size 353 for nodes 153-217-0
+Cluster of size 375 for nodes 153-329-0
+Cluster of size 348 for nodes 153-293-0
+Cluster of size 351 for nodes 153-229-0
+Cluster of size 358 for nodes 153-178-0
+Cluster of size 372 for nodes 153-265-0
+Cluster of size 361 for nodes 153-284-0
+Cluster of size 365 for nodes 153-302-0
+Cluster of size 349 for nodes 153-270-0
+Cluster of size 347 for nodes 153-233-0
+Cluster of size 354 for nodes 153-328-0
+Cluster of size 386 for nodes 153-172-0
+Cluster of size 355 for nodes 153-181-0
+Cluster of size 346 for nodes 153-335-0
+Cluster of size 347 for nodes 153-234-0
+Cluster of size 346 for nodes 153-209-0
+Cluster of size 350 for nodes 153-193-0
+Cluster of size 355 for nodes 153-309-0
+Cluster of size 354 for nodes 153-195-0
+Cluster of size 348 for nodes 153-301-0
+Cluster of size 369 for nodes 153-242-0
+Cluster of size 349 for nodes 153-166-0
+Cluster of size 358 for nodes 153-196-0
+Cluster of size 354 for nodes 153-337-0
+Cluster of size 357 for nodes 153-198-0
+Cluster of size 347 for nodes 153-244-0
+Cluster of size 352 for nodes 153-317-0
+Cluster of size 365 for nodes 153-180-0
+Cluster of size 355 for nodes 153-278-0
+Cluster of size 363 for nodes 153-343-0
+Cluster of size 363 for nodes 153-257-0
+Cluster of size 360 for nodes 153-258-0
+Cluster of size 350 for nodes 153-245-0
+Cluster of size 370 for nodes 153-297-0
+Cluster of size 417 for nodes 153-322-0
+Cluster of size 354 for nodes 153-230-0
+Cluster of size 384 for nodes 153-325-0
+Cluster of size 349 for nodes 153-206-0
+Cluster of size 361 for nodes 153-197-0
+Cluster of size 371 for nodes 153-312-0
+Cluster of size 384 for nodes 153-213-0
+Cluster of size 372 for nodes 153-339-0
+Cluster of size 352 for nodes 153-347-0
+Cluster of size 352 for nodes 153-167-0
+Cluster of size 353 for nodes 153-333-0
+Cluster of size 347 for nodes 153-216-0
+Cluster of size 353 for nodes 153-260-0
+Cluster of size 359 for nodes 153-176-0
+Cluster of size 371 for nodes 153-324-0
+Cluster of size 348 for nodes 153-294-0
+Cluster of size 384 for nodes 153-323-0
+Cluster of size 366 for nodes 153-248-0
+Cluster of size 361 for nodes 153-330-0
+Cluster of size 392 for nodes 153-199-0
+Cluster of size 353 for nodes 153-259-0
+Cluster of size 348 for nodes 153-228-0
+Cluster of size 352 for nodes 153-311-0
+Cluster of size 350 for nodes 153-235-0
+Cluster of size 402 for nodes 153-200-0
+Cluster of size 418 for nodes 153-271-0
+Cluster of size 366 for nodes 153-231-0
+Cluster of size 367 for nodes 153-204-0
+Cluster of size 373 for nodes 141-153-0
+Cluster of size 388 for nodes 142-153-0
+Cluster of size 357 for nodes 143-153-0
+Cluster of size 360 for nodes 144-153-0
+Cluster of size 347 for nodes 145-153-0
+Cluster of size 355 for nodes 146-153-0
+Cluster of size 351 for nodes 147-153-0
+Cluster of size 365 for nodes 148-153-0
+Cluster of size 359 for nodes 149-153-0
+Cluster of size 356 for nodes 150-153-0
+Cluster of size 352 for nodes 151-153-0
+Cluster of size 350 for nodes 152-153-0
+Cluster of size 357 for nodes 153-156-0
+Cluster of size 349 for nodes 153-288-0
+Cluster of size 383 for nodes 153-261-0
+Cluster of size 369 for nodes 153-308-0
+Cluster of size 347 for nodes 153-256-0
+Cluster of size 410 for nodes 153-252-0
+Cluster of size 410 for nodes 153-277-0
+Cluster of size 365 for nodes 153-299-0
+Cluster of size 356 for nodes 153-168-0
+Cluster of size 401 for nodes 153-315-0
+Cluster of size 363 for nodes 153-266-0
+Cluster of size 349 for nodes 153-201-0
+Cluster of size 359 for nodes 153-290-0
+Cluster of size 349 for nodes 153-289-0
+Cluster of size 362 for nodes 153-254-0
+Cluster of size 348 for nodes 153-157-0
+Cluster of size 348 for nodes 153-247-0
+Cluster of size 347 for nodes 153-255-0
+Cluster of size 347 for nodes 153-316-0
+Cluster of size 346 for nodes 153-215-0
+Cluster of size 348 for nodes 153-207-0
+Cluster of size 359 for nodes 153-251-0
+Cluster of size 348 for nodes 153-155-0
+Cluster of size 370 for nodes 153-232-0
+Cluster of size 352 for nodes 153-300-0
+Cluster of size 350 for nodes 153-250-0
+Cluster of size 347 for nodes 153-279-0
+Cluster of size 351 for nodes 153-269-0
+Cluster of size 347 for nodes 153-205-0
+Cluster of size 349 for nodes 153-202-0
+Cluster of size 358 for nodes 153-314-0
+Cluster of size 355 for nodes 153-295-0
+Cluster of size 382 for nodes 153-236-0
+Cluster of size 358 for nodes 153-310-0
+Cluster of size 352 for nodes 153-296-0
+Cluster of size 359 for nodes 153-246-0
+Cluster of size 369 for nodes 153-249-0
+Cluster of size 382 for nodes 153-313-0
+Cluster of size 348 for nodes 153-321-0
+Cluster of size 366 for nodes 153-320-0
+Cluster of size 353 for nodes 153-319-0
+Cluster of size 362 for nodes 1-153-0
+Cluster of size 355 for nodes 2-153-0
+Cluster of size 362 for nodes 3-153-0
+Cluster of size 355 for nodes 4-153-0
+Cluster of size 358 for nodes 5-153-0
+Cluster of size 351 for nodes 6-153-0
+Cluster of size 365 for nodes 7-153-0
+Cluster of size 353 for nodes 8-153-0
+Cluster of size 402 for nodes 9-153-0
+Cluster of size 355 for nodes 10-153-0
+Cluster of size 346 for nodes 11-153-0
+Cluster of size 346 for nodes 12-153-0
+Cluster of size 356 for nodes 153-318-0
+Cluster of size 376 for nodes 13-153-0
+Cluster of size 360 for nodes 14-153-0
+Cluster of size 346 for nodes 15-153-0
+Cluster of size 354 for nodes 16-153-0
+Cluster of size 358 for nodes 17-153-0
+Cluster of size 346 for nodes 18-153-0
+Cluster of size 361 for nodes 19-153-0
+Cluster of size 360 for nodes 20-153-0
+Cluster of size 410 for nodes 21-153-0
+Cluster of size 356 for nodes 22-153-0
+Cluster of size 362 for nodes 23-153-0
+Cluster of size 361 for nodes 24-153-0
+Cluster of size 414 for nodes 25-153-0
+Cluster of size 413 for nodes 26-153-0
+Cluster of size 350 for nodes 27-153-0
+Cluster of size 358 for nodes 28-153-0
+Cluster of size 358 for nodes 29-153-0
+Cluster of size 362 for nodes 30-153-0
+Cluster of size 368 for nodes 31-153-0
+Cluster of size 351 for nodes 32-153-0
+Cluster of size 347 for nodes 33-153-0
+Cluster of size 350 for nodes 34-153-0
+Cluster of size 347 for nodes 35-153-0
+Cluster of size 356 for nodes 36-153-0
+Cluster of size 346 for nodes 37-153-0
+Cluster of size 354 for nodes 38-153-0
+Cluster of size 360 for nodes 39-153-0
+Cluster of size 389 for nodes 40-153-0
+Cluster of size 369 for nodes 41-153-0
+Cluster of size 347 for nodes 42-153-0
+Cluster of size 346 for nodes 43-153-0
+Cluster of size 351 for nodes 44-153-0
+Cluster of size 351 for nodes 77-153-0
+Cluster of size 354 for nodes 78-153-0
+Cluster of size 357 for nodes 79-153-0
+Cluster of size 368 for nodes 80-153-0
+Cluster of size 348 for nodes 81-153-0
+Cluster of size 379 for nodes 82-153-0
+Cluster of size 352 for nodes 83-153-0
+Cluster of size 358 for nodes 84-153-0
+Cluster of size 359 for nodes 85-153-0
+Cluster of size 351 for nodes 86-153-0
+Cluster of size 358 for nodes 87-153-0
+Cluster of size 365 for nodes 88-153-0
+Cluster of size 353 for nodes 89-153-0
+Cluster of size 347 for nodes 90-153-0
+Cluster of size 353 for nodes 91-153-0
+Cluster of size 366 for nodes 92-153-0
+Cluster of size 353 for nodes 93-153-0
+Cluster of size 367 for nodes 94-153-0
+Cluster of size 351 for nodes 95-153-0
+Cluster of size 354 for nodes 96-153-0
+Cluster of size 348 for nodes 97-153-0
+Cluster of size 394 for nodes 98-153-0
+Cluster of size 358 for nodes 99-153-0
+Cluster of size 354 for nodes 100-153-0
+Cluster of size 364 for nodes 101-153-0
+Cluster of size 351 for nodes 102-153-0
+Cluster of size 361 for nodes 103-153-0
+Cluster of size 377 for nodes 104-153-0
+Cluster of size 359 for nodes 105-153-0
+Cluster of size 353 for nodes 106-153-0
+Cluster of size 1390 for nodes 107-153-0
+Cluster of size 358 for nodes 108-153-0
+Cluster of size 357 for nodes 45-153-0
+Cluster of size 350 for nodes 46-153-0
+Cluster of size 347 for nodes 47-153-0
+Cluster of size 367 for nodes 48-153-0
+Cluster of size 349 for nodes 49-153-0
+Cluster of size 356 for nodes 50-153-0
+Cluster of size 352 for nodes 51-153-0
+Cluster of size 347 for nodes 52-153-0
+Cluster of size 376 for nodes 53-153-0
+Cluster of size 353 for nodes 54-153-0
+Cluster of size 362 for nodes 55-153-0
+Cluster of size 423 for nodes 56-153-0
+Cluster of size 360 for nodes 57-153-0
+Cluster of size 357 for nodes 58-153-0
+Cluster of size 364 for nodes 59-153-0
+Cluster of size 353 for nodes 60-153-0
+Cluster of size 348 for nodes 61-153-0
+Cluster of size 371 for nodes 62-153-0
+Cluster of size 351 for nodes 63-153-0
+Cluster of size 352 for nodes 64-153-0
+Cluster of size 357 for nodes 65-153-0
+Cluster of size 360 for nodes 66-153-0
+Cluster of size 421 for nodes 67-153-0
+Cluster of size 354 for nodes 68-153-0
+Cluster of size 355 for nodes 69-153-0
+Cluster of size 347 for nodes 70-153-0
+Cluster of size 348 for nodes 71-153-0
+Cluster of size 369 for nodes 72-153-0
+Cluster of size 355 for nodes 73-153-0
+Cluster of size 346 for nodes 74-153-0
+Cluster of size 359 for nodes 75-153-0
+Cluster of size 348 for nodes 76-153-0
+Cluster of size 382 for nodes 109-153-0
+Cluster of size 350 for nodes 110-153-0
+Cluster of size 359 for nodes 111-153-0
+Cluster of size 348 for nodes 112-153-0
+Cluster of size 385 for nodes 113-153-0
+Cluster of size 346 for nodes 114-153-0
+Cluster of size 366 for nodes 115-153-0
+Cluster of size 362 for nodes 116-153-0
+Cluster of size 351 for nodes 117-153-0
+Cluster of size 381 for nodes 118-153-0
+Cluster of size 407 for nodes 119-153-0
+Cluster of size 349 for nodes 120-153-0
+Cluster of size 357 for nodes 121-153-0
+Cluster of size 408 for nodes 122-153-0
+Cluster of size 363 for nodes 123-153-0
+Cluster of size 349 for nodes 124-153-0
+Cluster of size 349 for nodes 125-153-0
+Cluster of size 352 for nodes 126-153-0
+Cluster of size 361 for nodes 127-153-0
+Cluster of size 373 for nodes 128-153-0
+Cluster of size 352 for nodes 129-153-0
+Cluster of size 361 for nodes 130-153-0
+Cluster of size 352 for nodes 131-153-0
+Cluster of size 361 for nodes 132-153-0
+Cluster of size 363 for nodes 133-153-0
+Cluster of size 364 for nodes 134-153-0
+Cluster of size 355 for nodes 135-153-0
+Cluster of size 478 for nodes 136-153-0
+Cluster of size 361 for nodes 137-153-0
+Cluster of size 347 for nodes 138-153-0
+Cluster of size 354 for nodes 139-153-0
+Cluster of size 356 for nodes 140-153-0
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 256, pair_combination = 32792
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 259, pair_combination = 33563
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 257, pair_combination = 33048
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 236, pair_combination = 27882
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 238, pair_combination = 28355
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 322, pair_combination = 51833
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 323, pair_combination = 52155
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 220, pair_combination = 24242
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 217, pair_combination = 23588
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 221, pair_combination = 24462
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 219, pair_combination = 24023
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 218, pair_combination = 23805
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 239, pair_combination = 28593
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 209, pair_combination = 21888
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 262, pair_combination = 34343
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 337, pair_combination = 56768
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 240, pair_combination = 28832
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 280, pair_combination = 39212
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 303, pair_combination = 45905
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 273, pair_combination = 37280
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 304, pair_combination = 46208
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 346, pair_combination = 59837
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 182, pair_combination = 16623
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 345, pair_combination = 59492
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 188, pair_combination = 17730
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 321, pair_combination = 51512
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 258, pair_combination = 33305
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 215, pair_combination = 23157
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 252, pair_combination = 31778
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 242, pair_combination = 29313
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 234, pair_combination = 27413
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 241, pair_combination = 29072
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 243, pair_combination = 29555
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 279, pair_combination = 38933
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 281, pair_combination = 39492
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 282, pair_combination = 39773
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 237, pair_combination = 28118
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 261, pair_combination = 34082
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 263, pair_combination = 34605
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 180, pair_combination = 16262
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 178, pair_combination = 15905
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 175, pair_combination = 15377
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 210, pair_combination = 22097
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 271, pair_combination = 36737
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 302, pair_combination = 45603
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 176, pair_combination = 15552
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 211, pair_combination = 22307
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 260, pair_combination = 33822
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 208, pair_combination = 21680
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 179, pair_combination = 16083
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 301, pair_combination = 45302
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 331, pair_combination = 54767
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 212, pair_combination = 22518
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 177, pair_combination = 15728
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 244, pair_combination = 29798
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 277, pair_combination = 38378
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 174, pair_combination = 15203
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 296, pair_combination = 43812
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 341, pair_combination = 58122
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 339, pair_combination = 57443
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 340, pair_combination = 57782
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 315, pair_combination = 49607
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 203, pair_combination = 20655
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 297, pair_combination = 44108
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 319, pair_combination = 50873
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 289, pair_combination = 41768
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 317, pair_combination = 50238
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 320, pair_combination = 51192
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 228, pair_combination = 26030
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 294, pair_combination = 43223
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 216, pair_combination = 23372
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 213, pair_combination = 22730
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 214, pair_combination = 22943
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 275, pair_combination = 37827
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 307, pair_combination = 47123
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 318, pair_combination = 50555
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 272, pair_combination = 37008
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 253, pair_combination = 32030
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 232, pair_combination = 26948
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 274, pair_combination = 37553
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 338, pair_combination = 57105
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 233, pair_combination = 27180
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 336, pair_combination = 56432
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 255, pair_combination = 32537
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 306, pair_combination = 46817
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 231, pair_combination = 26717
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 235, pair_combination = 27647
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 254, pair_combination = 32283
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 311, pair_combination = 48357
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 290, pair_combination = 42057
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 344, pair_combination = 59148
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 342, pair_combination = 58463
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 343, pair_combination = 58805
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 286, pair_combination = 40907
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 269, pair_combination = 36198
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 326, pair_combination = 53127
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 270, pair_combination = 36467
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 330, pair_combination = 54437
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 225, pair_combination = 25352
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 160, pair_combination = 12872
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 264, pair_combination = 34868
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 247, pair_combination = 30533
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 335, pair_combination = 56097
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 246, pair_combination = 30287
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 245, pair_combination = 30042
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 328, pair_combination = 53780
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 183, pair_combination = 16805
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 185, pair_combination = 17172
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 187, pair_combination = 17543
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 181, pair_combination = 16442
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 186, pair_combination = 17357
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 191, pair_combination = 18297
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 305, pair_combination = 46512
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 327, pair_combination = 53453
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 207, pair_combination = 21473
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 251, pair_combination = 31527
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 190, pair_combination = 18107
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 184, pair_combination = 16988
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 249, pair_combination = 31028
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 227, pair_combination = 25803
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 189, pair_combination = 17918
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 316, pair_combination = 49922
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 206, pair_combination = 21267
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 172, pair_combination = 14858
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 314, pair_combination = 49293
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 204, pair_combination = 20858
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 300, pair_combination = 45002
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 169, pair_combination = 14348
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 276, pair_combination = 38102
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 173, pair_combination = 15030
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 298, pair_combination = 44405
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 288, pair_combination = 41480
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 287, pair_combination = 41193
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 170, pair_combination = 14517
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 171, pair_combination = 14687
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 278, pair_combination = 38655
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 299, pair_combination = 44703
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 168, pair_combination = 14180
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 164, pair_combination = 13518
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 193, pair_combination = 18680
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 165, pair_combination = 13682
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 163, pair_combination = 13355
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 192, pair_combination = 18488
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 166, pair_combination = 13847
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 194, pair_combination = 18873
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 167, pair_combination = 14013
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 195, pair_combination = 19067
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 295, pair_combination = 43517
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 308, pair_combination = 47430
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 268, pair_combination = 35930
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 309, pair_combination = 47738
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 310, pair_combination = 48047
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 332, pair_combination = 55098
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 333, pair_combination = 55430
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 161, pair_combination = 13032
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 334, pair_combination = 55763
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 162, pair_combination = 13193
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 159, pair_combination = 12713
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 266, pair_combination = 35397
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 291, pair_combination = 42347
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 293, pair_combination = 42930
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 292, pair_combination = 42638
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 312, pair_combination = 48668
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 313, pair_combination = 48980
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 223, pair_combination = 24905
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 205, pair_combination = 21062
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 202, pair_combination = 20453
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 226, pair_combination = 25577
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 325, pair_combination = 52802
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 285, pair_combination = 40622
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 283, pair_combination = 40055
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 324, pair_combination = 52478
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 284, pair_combination = 40338
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 229, pair_combination = 26258
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 230, pair_combination = 26487
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 267, pair_combination = 35663
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 224, pair_combination = 25128
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 222, pair_combination = 24683
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 329, pair_combination = 54108
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 250, pair_combination = 31277
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 248, pair_combination = 30780
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 157, pair_combination = 12398
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 196, pair_combination = 19262
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 265, pair_combination = 35132
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 158, pair_combination = 12555
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 199, pair_combination = 19853
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 197, pair_combination = 19458
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 200, pair_combination = 20052
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 76, edge_two: 152, pair_combination = 11552
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 77, edge_two: 152, pair_combination = 11553
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 78, edge_two: 152, pair_combination = 11554
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 79, edge_two: 152, pair_combination = 11555
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 80, edge_two: 152, pair_combination = 11556
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 81, edge_two: 152, pair_combination = 11557
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 82, edge_two: 152, pair_combination = 11558
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 83, edge_two: 152, pair_combination = 11559
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 84, edge_two: 152, pair_combination = 11560
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 85, edge_two: 152, pair_combination = 11561
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 86, edge_two: 152, pair_combination = 11562
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 87, edge_two: 152, pair_combination = 11563
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 88, edge_two: 152, pair_combination = 11564
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 89, edge_two: 152, pair_combination = 11565
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 90, edge_two: 152, pair_combination = 11566
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 91, edge_two: 152, pair_combination = 11567
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 92, edge_two: 152, pair_combination = 11568
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 93, edge_two: 152, pair_combination = 11569
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 94, edge_two: 152, pair_combination = 11570
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 95, edge_two: 152, pair_combination = 11571
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 96, edge_two: 152, pair_combination = 11572
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 97, edge_two: 152, pair_combination = 11573
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 98, edge_two: 152, pair_combination = 11574
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 99, edge_two: 152, pair_combination = 11575
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 100, edge_two: 152, pair_combination = 11576
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 101, edge_two: 152, pair_combination = 11577
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 102, edge_two: 152, pair_combination = 11578
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 103, edge_two: 152, pair_combination = 11579
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 104, edge_two: 152, pair_combination = 11580
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 105, edge_two: 152, pair_combination = 11581
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 106, edge_two: 152, pair_combination = 11582
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 107, edge_two: 152, pair_combination = 11583
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 12, edge_two: 152, pair_combination = 11488
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 13, edge_two: 152, pair_combination = 11489
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 14, edge_two: 152, pair_combination = 11490
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 15, edge_two: 152, pair_combination = 11491
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 16, edge_two: 152, pair_combination = 11492
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 17, edge_two: 152, pair_combination = 11493
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 18, edge_two: 152, pair_combination = 11494
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 19, edge_two: 152, pair_combination = 11495
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 20, edge_two: 152, pair_combination = 11496
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 21, edge_two: 152, pair_combination = 11497
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 22, edge_two: 152, pair_combination = 11498
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 23, edge_two: 152, pair_combination = 11499
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 24, edge_two: 152, pair_combination = 11500
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 25, edge_two: 152, pair_combination = 11501
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 26, edge_two: 152, pair_combination = 11502
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 27, edge_two: 152, pair_combination = 11503
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 28, edge_two: 152, pair_combination = 11504
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 29, edge_two: 152, pair_combination = 11505
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 30, edge_two: 152, pair_combination = 11506
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 31, edge_two: 152, pair_combination = 11507
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 32, edge_two: 152, pair_combination = 11508
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 33, edge_two: 152, pair_combination = 11509
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 34, edge_two: 152, pair_combination = 11510
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 35, edge_two: 152, pair_combination = 11511
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 36, edge_two: 152, pair_combination = 11512
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 37, edge_two: 152, pair_combination = 11513
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 38, edge_two: 152, pair_combination = 11514
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 39, edge_two: 152, pair_combination = 11515
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 40, edge_two: 152, pair_combination = 11516
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 41, edge_two: 152, pair_combination = 11517
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 42, edge_two: 152, pair_combination = 11518
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 43, edge_two: 152, pair_combination = 11519
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 44, edge_two: 152, pair_combination = 11520
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 45, edge_two: 152, pair_combination = 11521
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 46, edge_two: 152, pair_combination = 11522
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 47, edge_two: 152, pair_combination = 11523
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 48, edge_two: 152, pair_combination = 11524
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 49, edge_two: 152, pair_combination = 11525
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 50, edge_two: 152, pair_combination = 11526
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 51, edge_two: 152, pair_combination = 11527
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 52, edge_two: 152, pair_combination = 11528
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 53, edge_two: 152, pair_combination = 11529
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 54, edge_two: 152, pair_combination = 11530
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 55, edge_two: 152, pair_combination = 11531
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 56, edge_two: 152, pair_combination = 11532
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 57, edge_two: 152, pair_combination = 11533
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 58, edge_two: 152, pair_combination = 11534
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 59, edge_two: 152, pair_combination = 11535
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 60, edge_two: 152, pair_combination = 11536
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 61, edge_two: 152, pair_combination = 11537
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 62, edge_two: 152, pair_combination = 11538
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 63, edge_two: 152, pair_combination = 11539
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 64, edge_two: 152, pair_combination = 11540
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 65, edge_two: 152, pair_combination = 11541
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 66, edge_two: 152, pair_combination = 11542
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 67, edge_two: 152, pair_combination = 11543
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 68, edge_two: 152, pair_combination = 11544
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 69, edge_two: 152, pair_combination = 11545
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 70, edge_two: 152, pair_combination = 11546
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 71, edge_two: 152, pair_combination = 11547
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 72, edge_two: 152, pair_combination = 11548
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 73, edge_two: 152, pair_combination = 11549
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 74, edge_two: 152, pair_combination = 11550
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 75, edge_two: 152, pair_combination = 11551
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 201, pair_combination = 20252
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 198, pair_combination = 19655
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 153, pair_combination = 11780
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 156, pair_combination = 12242
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 140, edge_two: 152, pair_combination = 11616
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 141, edge_two: 152, pair_combination = 11617
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 142, edge_two: 152, pair_combination = 11618
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 143, edge_two: 152, pair_combination = 11619
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 144, edge_two: 152, pair_combination = 11620
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 145, edge_two: 152, pair_combination = 11621
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 146, edge_two: 152, pair_combination = 11622
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 147, edge_two: 152, pair_combination = 11623
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 148, edge_two: 152, pair_combination = 11624
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 149, edge_two: 152, pair_combination = 11625
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 150, edge_two: 152, pair_combination = 11626
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 151, edge_two: 152, pair_combination = 11627
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 155, pair_combination = 12087
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 152, edge_two: 154, pair_combination = 11933
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 0, edge_two: 152, pair_combination = 11476
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 1, edge_two: 152, pair_combination = 11477
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 2, edge_two: 152, pair_combination = 11478
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 3, edge_two: 152, pair_combination = 11479
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 4, edge_two: 152, pair_combination = 11480
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 5, edge_two: 152, pair_combination = 11481
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 6, edge_two: 152, pair_combination = 11482
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 7, edge_two: 152, pair_combination = 11483
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 8, edge_two: 152, pair_combination = 11484
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 9, edge_two: 152, pair_combination = 11485
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 10, edge_two: 152, pair_combination = 11486
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 11, edge_two: 152, pair_combination = 11487
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 108, edge_two: 152, pair_combination = 11584
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 109, edge_two: 152, pair_combination = 11585
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 110, edge_two: 152, pair_combination = 11586
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 111, edge_two: 152, pair_combination = 11587
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 112, edge_two: 152, pair_combination = 11588
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 113, edge_two: 152, pair_combination = 11589
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 114, edge_two: 152, pair_combination = 11590
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 115, edge_two: 152, pair_combination = 11591
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 116, edge_two: 152, pair_combination = 11592
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 117, edge_two: 152, pair_combination = 11593
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 118, edge_two: 152, pair_combination = 11594
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 119, edge_two: 152, pair_combination = 11595
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 120, edge_two: 152, pair_combination = 11596
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 121, edge_two: 152, pair_combination = 11597
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 122, edge_two: 152, pair_combination = 11598
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 123, edge_two: 152, pair_combination = 11599
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 124, edge_two: 152, pair_combination = 11600
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 125, edge_two: 152, pair_combination = 11601
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 126, edge_two: 152, pair_combination = 11602
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 127, edge_two: 152, pair_combination = 11603
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 128, edge_two: 152, pair_combination = 11604
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 129, edge_two: 152, pair_combination = 11605
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 130, edge_two: 152, pair_combination = 11606
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 131, edge_two: 152, pair_combination = 11607
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 132, edge_two: 152, pair_combination = 11608
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 133, edge_two: 152, pair_combination = 11609
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 134, edge_two: 152, pair_combination = 11610
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 135, edge_two: 152, pair_combination = 11611
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 136, edge_two: 152, pair_combination = 11612
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 137, edge_two: 152, pair_combination = 11613
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 138, edge_two: 152, pair_combination = 11614
+Vertex start: 0, prev vertex start: 0, Neighbor offset: 0, edge_one: 139, edge_two: 152, pair_combination = 11615
+Generation finished
+Copieeed clusters: 630251
+host cluster sizes copied
+host cluster starts copied
+Neighbor size: 13
+Indexes copied
+Copying 0B of data
+Start of last vertex: 2995
+Vertex starts copied
+Neighbors copied
+Generation finished
+Copieeed clusters: 78
+host cluster sizes copied
+host cluster starts copied
+Pairs Generated
+Computing chunk 5 of 40
+Streams used: 2
+Neighbor size: 11003
+Indexes copied
+Copying 800B of data
+Start of last vertex: 46130
+Vertex starts copied
+Neighbors copied

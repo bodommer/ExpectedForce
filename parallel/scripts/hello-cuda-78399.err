@@ -1,0 +1,1 @@
+/var/lib/slurm-llnl/slurmd/job78399/slurm_script: line 19: 52069 Segmentation fault      (core dumped) ../output/ExForce ../../test_edgelist.txt 1

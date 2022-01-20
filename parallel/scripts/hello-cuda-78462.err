@@ -1,0 +1,5 @@
+../exp_force_main.cu(38): error: expected a ")"
+
+../exp_force_main.cu(39): warning: argument is incompatible with corresponding format string conversion
+
+1 error detected in the compilation of "../exp_force_main.cu".

@@ -1,0 +1,2 @@
+free(): corrupted unsorted chunks
+/var/lib/slurm-llnl/slurmd/job78404/slurm_script: line 19: 52474 Aborted                 (core dumped) ../output/ExForce ../../test_edgelist.txt 1
